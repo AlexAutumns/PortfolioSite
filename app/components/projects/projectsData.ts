@@ -29,14 +29,14 @@ export const featuredProjects: Project[] = [
             "Dark mode support",
             "Animated sections",
         ],
-        url: "https://github.com/AlexAutumns/alexautumns.github.io",
+        url: "https://github.com/AlexAutumns/PortfolioSite",
     },
 ];
 
 export const archiveProjects: Project[] = [
     {
         title: "Portfolio Website",
-        url: "https://github.com/AlexAutumns/alexautumns.github.io",
+        url: "https://github.com/AlexAutumns/PortfolioSite",
         year: "2023",
         images: [Portfolio1],
         role: "Developer",
