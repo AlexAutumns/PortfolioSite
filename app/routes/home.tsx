@@ -1,17 +1,22 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
-}
+// Import components
+import Hero from "../components/home/Hero";
+import Skills from "../components/home/Skills";
+import FeaturedProjects from "../components/projects/FeaturedProjects";
+import Archive from "../components/projects/Archives";
 
-export function loader({ context }: Route.LoaderArgs) {
-  return { message: context.VALUE_FROM_NETLIFY };
-}
+import React from "react";
 
-export default function Home({ loaderData }: Route.ComponentProps) {
-  return <Welcome message={loaderData.message} />;
-}
+const home = () => {
+    return (
+        <main className="w-screen min-h-screen flex flex-col items-center justify-start space-y-15">
+            <Hero />
+            <Skills />
+            <FeaturedProjects />
+            <Archive />
+        </main>
+    );
+};
+
+export default home;
