@@ -38,6 +38,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 />
                 <Meta />
                 <Links />
+                <link rel="icon" type="image/png" href="/Logo.png" />
+                <title>Akia Hans - Portfolio</title>
             </head>
             <body>
                 {children}
