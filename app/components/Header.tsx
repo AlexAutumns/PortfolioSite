@@ -54,7 +54,7 @@ const Header = () => {
             className={`fixed top-0 left-0 w-full z-50 pointer-events-auto
         transition-opacity duration-500
         ${show ? "opacity-100" : "opacity-0"}
-        bg-gradient-to-b from-gray-950 to-transparent`}
+        bg-gradient-to-b from-black to-gray-900/25 backdrop-blur-xl shadow-md`}
         >
             <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
                 {/* Logo / Title */}
@@ -75,16 +75,13 @@ const Header = () => {
                 </a>
 
                 {/* Navigation Links */}
-                <ul className="flex gap-6 text-white">
+                <ul className="flex gap-6 ">
                     {navLinks.map((item, idx) => (
                         <li
                             key={idx}
-                            className="hover:text-orange-400 cursor-pointer transition-colors duration-300"
+                            className="hover:text-orange-300 cursor-pointer transition-colors duration-300"
                         >
-                            <button
-                                onClick={() => handleNavClick(item.href)}
-                                className="text-white"
-                            >
+                            <button onClick={() => handleNavClick(item.href)}>
                                 {item.label}
                             </button>
                         </li>

@@ -11,8 +11,8 @@ const projects = () => {
             <h1 className="text-[4em] font-bold text-white mt-10 mb-5">
                 Projects
             </h1>
-            <FeaturedProjects />
-            <Archive />
+            <FeaturedProjects showTitle={false} />
+            <Archive showTitle={false} />
         </main>
     );
 };

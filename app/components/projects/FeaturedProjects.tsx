@@ -4,7 +4,13 @@ import { featuredProjects } from "./projectsData";
 import useEmblaCarousel from "embla-carousel-react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-const FeaturedProjects = () => {
+interface FeaturedProjectsProps {
+    showTitle?: boolean; // optional prop, defaults to true
+}
+
+const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({
+    showTitle = true,
+}) => {
     const [emblaRef, emblaApi] = useEmblaCarousel({
         loop: true,
         align: "center",
@@ -34,23 +40,25 @@ const FeaturedProjects = () => {
 
     return (
         <section className="py-12 bg-gray-950 w-full overflow-hidden">
-            <h2 className="text-4xl font-bold text-center text-gray-100 mb-12">
-                Featured Projects
-            </h2>
+            {showTitle && (
+                <h2 className="text-4xl font-bold text-center text-gray-100 mb-12">
+                    Featured Projects
+                </h2>
+            )}
 
             <div className="relative w-[95%] mx-auto">
                 {/* Navigation Arrows */}
                 <button
                     onClick={scrollPrev}
                     disabled={prevBtnDisabled}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-800/50 text-white p-3 rounded-full hover:bg-gray-800 disabled:opacity-30"
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-800/50 text-white p-3 rounded-full hover:bg-gray-800 disabled:opacity-30 transition-all duration-300"
                 >
                     <FaArrowLeft />
                 </button>
                 <button
                     onClick={scrollNext}
                     disabled={nextBtnDisabled}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-800/50 text-white p-3 rounded-full hover:bg-gray-800 disabled:opacity-30"
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-gray-800/50 text-white p-3 rounded-full hover:bg-gray-950 disabled:opacity-30 transition-all duration-300"
                 >
                     <FaArrowRight />
                 </button>

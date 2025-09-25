@@ -103,29 +103,31 @@ const FeaturedProjectCard = ({ project }: Props) => {
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-4xl md:text-5xl font-bold hover:text-orange-300 transition-colors duration-300"
+                        className="text-3xl md:text-4xl font-bold hover:text-orange-300 transition-colors duration-300"
                     >
                         {project.title}
                     </a>
                 ) : (
-                    <h2 className="text-4xl md:text-5xl font-bold">
+                    <h2 className="text-3xl md:text-4xl font-bold">
                         {project.title}
                     </h2>
                 )}
 
                 {/* Description & bullet points */}
-                <div className="flex flex-col gap-4 overflow-y-auto">
-                    {project.description?.map((para, idx) => (
-                        <p
-                            key={idx}
-                            className="text-gray-200 text-base md:text-md"
-                        >
-                            {para}
-                        </p>
-                    ))}
+                <div className="flex flex-col gap-8 overflow-y-auto">
+                    <div className="flex flex-col gap-2">
+                        {project.description?.map((para, idx) => (
+                            <p
+                                key={idx}
+                                className="text-gray-200 text-base md:text-md text-justify"
+                            >
+                                {para}
+                            </p>
+                        ))}
+                    </div>
 
                     {project.bulletPoints && (
-                        <ul className="list-disc list-inside text-gray-200 text-base md:text-md">
+                        <ul className="list-disc list-inside text-gray-200 text-base md:text-md text-justify flex flex-col gap-2">
                             {project.bulletPoints.map((point, idx) => (
                                 <li key={idx}>{point}</li>
                             ))}
@@ -140,7 +142,10 @@ const FeaturedProjectCard = ({ project }: Props) => {
                             href={project.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-[0.8em] bg-orange-100 hover:bg-orange-300 text-black hover:text-gray-800 px-4 py-2 rounded-md transition-colors duration-300"
+                            className="flex items-center gap-2 text-[0.8em] bg-orange-100 hover:bg-orange-400 text-black hover:text-gray-800 px-4 py-2 
+                            rounded-tr-3xl rounded-tl-lg rounded-bl-3xl rounded-br-lg  
+                            hover:rounded-4xl hover:rounded-tr-md
+                            transition-all duration-300"
                         >
                             View Project <FaExternalLinkAlt />
                         </a>
