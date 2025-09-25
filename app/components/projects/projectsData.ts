@@ -16,7 +16,7 @@ import ImageClassifier2 from "../../../assets/images/projectImages/ImageClassifi
 
 import OldPortfolio1 from "../../../assets/images/projectImages/OldPortfolio1.png";
 
-import RandomQuoteGenerator2 from "../../../assets/images/projectImages/RandomQuoteGenerator2.png";
+import RandomQuoteGenerator2 from "../../../assets/images/projectImages/randomQuoteGenerator2.png";
 
 import EnomyFinance1 from "../../../assets/images/projectImages/EnomyFinance1.png";
 import EnomyFinance2 from "../../../assets/images/projectImages/EnomyFinance2.png";
